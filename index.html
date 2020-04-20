@@ -116,6 +116,18 @@
                 <input type="button" class="button-primary" value="Start again" onclick="start_again();">
             </div>
         </div>
+        <div>
+            This app uses Google Analytics. <a href="https://policies.google.com/privacy?hl=en-US">Learn more</a>
+        </div>
         <script src="script.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164041007-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-164041007-1');
+        </script>
     </body>
 </html>
