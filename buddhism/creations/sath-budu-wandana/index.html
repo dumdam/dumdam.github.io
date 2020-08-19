@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="simplegrid.css" type="text/css" />
+    <title>සත් බුදු වන්දනාව</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+      .image{
+        width:100%;
+      }
+      .board{
+        font-weight: bold;
+      }
+      .bulb{
+        display: inline-block;
+        border-radius: 50%;
+        background-color: blue;
+        width: 30px;
+        height: 30px;
+        border: 1px solid lightyellow;
+        opacity: 0;
+      }
+      .gatha{
+        text-align: center;
+        font-size: 30px;
+      }
+      .label{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="text-align:center;">
+      <h1>සත් බුදු වන්දනාව</h1>
+    </div>
+    <div class="grid">
+      <div class="col-1-7">
+        <div class="content">
+          <img src="lord_buddha.jpg" class="image" alt="photo_of_lord_buddha" />
+          <div class="label">
+            <p class="board">විපස්සී බුදුරජාණන් වහන්සේ</p>
+            <div class="bulb">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-7">
+        <div class="content">
+          <img src="lord_buddha.jpg" class="image" alt="photo_of_lord_buddha" />
+          <div class="label">
+            <p class="board">සිඛී බුදුරජාණන් වහන්සේ</p>
+            <div class="bulb">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-7">
+        <div class="content">
+          <img src="lord_buddha.jpg" class="image" alt="photo_of_lord_buddha" />
+          <div class="label">
+            <p class="board">වෙස්සභූ බුදුරජාණන් වහන්සේ</p>
+            <div class="bulb">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-7">
+        <div class="content">
+          <img src="lord_buddha.jpg" class="image" alt="photo_of_lord_buddha" />
+          <div class="label">
+            <p class="board">කකුසඳ බුදුරජාණන් වහන්සේ</p>
+            <div class="bulb">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-7">
+        <div class="content">
+          <img src="lord_buddha.jpg" class="image" alt="photo_of_lord_buddha" />
+          <div class="label">
+            <p class="board">කෝණාගම බුදුරජාණන් වහන්සේ</p>
+            <div class="bulb">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-7">
+        <div class="content">
+          <img src="lord_buddha.jpg" class="image" alt="photo_of_lord_buddha" />
+          <div class="label">
+            <p class="board">කාශ්‍යප බුදුරජාණන් වහන්සේ</p>
+            <div class="bulb">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-1-7">
+        <div class="content">
+          <img src="lord_buddha.jpg" class="image" alt="photo_of_lord_buddha" />
+          <div class="label">
+            <p class="board">ගෞතම බුදුරජාණන් වහන්සේ</p>
+            <div class="bulb">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="gatha">
+      <p>
+        විපස්සිස්ස නමත්ථු	– චක්ඛුමන්තස්ස සිරිමතෝ <br />
+        සිඛිස්සපි නමත්ථු	– සබ්බභුතානු කම්පිනෝ <br />
+        වෙස්සභුස්ස නමත්ථු	– නහාතකස්ස තපස්සිනෝ <br />
+        නමත්ථු කකුසන්ධස්ස	– මාරසේනා පමද්දිනෝ <br />
+        කෝණාගමනස්ස නමත්ථු	– බ්‍රාහ්මණස්ස වුසිමතෝ <br />
+        කස්සපස්ස නමත්ථු	– විප්පමුත්තස්ස සබ්බධී <br />
+        අංගිරස්ස නමත්ථු	– සක්‍ය පුත්තස්ස සිරිමතෝ <br />
+        යෝ ඉමං ධම්ම ම් දේසේසී	– සබ්බ දුක්ඛා පනුදනං <br />
+        යේ චාපි නිබ්බුතා ලෝකේ	– යථාභූතං විපස්සිසුං <br />
+        තේජනා අපිසුණා	– මහන්තා වීත සරදා <br />
+        හිතං දේව මනුස්සානං	– යං නමස්සන්ති ගෝතමං <br />
+        විජ්ජාචරණ සම්පන්නං	– මහන්තං වීතසාරදං <br />
+        විජ්ජාචරණ සම්පන්නං	– බුද්ධං වන්දාම ගෝතමං <br />
+      </p>
+    </div>
+    <script>
+      var colors = ["blue","yellow", "red", "orange"];
+      var i = 1;
+      var way = true;
+
+      var bulbs = document.getElementsByClassName("bulb");
+      for (let k = 0; k < bulbs.length; k++) {
+        bulbs[k].style.opacity = 0;
+      }
+
+      function change(){
+        let to = 0;
+
+        if(i == 4){
+          to = 0;
+          i=1;
+        }else{
+          to = i++;
+        }
+
+        for(let j = 0; j<bulbs.length;j++){
+          bulbs[j].style.backgroundColor = colors[to];
+        }
+      }
+
+      function change_opacity(op){
+        for(let j = 0; j<bulbs.length;j++){
+          bulbs[j].style.opacity = op;
+        }
+      }
+
+      function opacity(){
+        let op = new Number(bulbs[0].style.opacity);
+        if(op == 0){
+          change_opacity(0.1);
+          way = true;
+        }else if(op == 1){
+          change_opacity(0.9);
+          way = false;
+        }else if(op < 1.0 && op > 0){
+          if(way){
+            change_opacity(op + 0.1);
+          }else{
+            change_opacity(op - 0.1);
+          }
+        }
+      }
+
+      var opa_id = setInterval(opacity, 100);
+      var change_id = setInterval(change, 1100);
+    </script>
+  </body>
+</html>
