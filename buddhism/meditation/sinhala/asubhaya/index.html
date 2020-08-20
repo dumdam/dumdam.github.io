@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>අසුභ භාවනාව</title>
+    <style>
+        .image{
+            display: inline-block;
+            width: 500px;
+            height: 400px;
+            background-image: url("images/hair.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+        .control{
+            display: inline-block;
+        }
+        .btn{
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>අසුභ භාවනාව</h1>
+    </div>
+    <div style="width: 80%; margin: auto; text-align: center;">
+        <h3 id="text">කෙස්</h3>
+        <div class="image" id="image_cont"></div>
+        <br />
+        <div class="control">
+            <button id="previous" class="btn">Previous</button>
+            <button id="next" class="btn">Next</button>
+        </div>
+    </div>
+    <script>
+        var current = 0;
+        
+        var images = [
+            "hair.jpg",
+            "hair-on-body.jpg",
+            "nails.jpg",
+            "tooth.jpg",
+            "skin.jpg",
+            "mas.jpg",
+            "nahara.jpg",
+            "skeleton.jpg",
+            "bone-marrow.png",
+            "kidney.jpg",
+            "heart.png",
+            "liver.jpg",
+            "dalabuwa.png",
+            "badadiwa.jpg",
+            "lungs.jpg",
+            "small-intestine.jpg",
+            "big-intestine.jpg",
+            "vomit.jpg",
+            "stomatch.png",
+            "feces.jpg",
+            "brain.jpg",
+            "pitha.jpg",
+            "sema.jpg",
+            "sarawa.jpg",
+            "blood.jpg",
+            "sweat.jpg",
+            "fat.jpg",
+            "tears.jpg",
+            "wurunu-thel.jpg",
+            "spit.jpeg",
+            "snot.jpg",
+            "marrow.jpg",
+            "urine.jpg"
+        ];
+        var heads = [
+            "කෙස්",
+            "ලොම්",
+            "නියපොතු",
+            "දත්",
+            "සම",
+            "මස්",
+            "නහර",
+            "ඇට",
+            "ඇටමිදුළු",
+            "වකුගඩු",
+            "හදවත",
+            "අක්මාව",
+            "දළබුව",
+            "බඩදිව (අග්න්‍යාසය)",
+            "පෙනහලු",
+            "කුඩා බඩවැල",
+            "මහා බඩවැල",
+            "නොපෑසුණු ආහාර (වමනය )",
+            "ආමාශය",
+            "අසූචි",
+            "හිස්මොළ",
+            "පිත",
+            "සෙම",
+            "සැරව",
+            "ලේ",
+            "දහදිය",
+            "තෙල්මන්ද (මේදය)",
+            "කඳුළු",
+            "වුරුණු තෙල්",
+            "කෙළ",
+            "සොටු",
+            "සඳමිදුළු",
+            "මුත්‍රා"
+        ];
+
+        var image_cont = document.getElementById("image_cont");
+        var text = document.getElementById("text");
+
+        function next(){
+            if(current == heads.length - 1){
+                current = 0;
+                image_cont.style.backgroundImage = "url('images/"+ images[current]+"')";
+                text.innerHTML = heads[current];
+            }else{
+                image_cont.style.backgroundImage = "url('images/"+ images[++current]+"')";
+                text.innerHTML = heads[current];
+            }
+        }
+
+        function previous(){
+            if(current == 0){
+                current = heads.length - 1;
+                image_cont.style.backgroundImage = "url('images/"+ images[current]+"')";
+                text.innerHTML = heads[current];
+            }else{
+                image_cont.style.backgroundImage = "url('images/"+ images[--current]+"')";
+                text.innerHTML = heads[current];
+            }
+        }
+
+        document.getElementById("next").addEventListener("click", next);
+        document.getElementById("previous").addEventListener("click", previous);
+    </script>
+</body>
+</html>
